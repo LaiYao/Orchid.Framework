@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0-*",
+    "description": "Orchid.DDD.Domain Class Library",
+    "authors": [ "遥" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "Orchid.Core": "1.0.0-*"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    }
+}

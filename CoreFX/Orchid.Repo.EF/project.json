@@ -1,0 +1,20 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "Orchid.Repo.EF Class Library",
+    "authors": [ "遥" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "Orchid.Repo": "1.0.0-*"
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "dependencies": {
+                "EntityFramework.Core": "7.0.0-*"
+            }
+        }
+    }
+}
