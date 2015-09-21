@@ -7,11 +7,11 @@
     "licenseUrl": "",
 
     "dependencies": {
-        "Orchid.Core": "1.0.0-*"
+        "Orchid.Core": "1.0.0-*",
+        "Microsoft.Framework.NotNullAttribute.Sources": "1.0.0-*"
     },
 
     "frameworks": {
-        "dnx451": { },
-        "dnxcore50": { }
+        "dnx451": { }
     }
 }

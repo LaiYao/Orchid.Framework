@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Orchid.Core.Utilities
 {
-    public static class DateTimeExtention
+    public static class DateTimeExtensions
     {
         public static bool IsWeekend(this DateTime date)
         {

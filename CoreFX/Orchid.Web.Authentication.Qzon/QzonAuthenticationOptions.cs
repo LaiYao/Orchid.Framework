@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Authentication.OAuth;
 
 namespace Orchid.Web.Authentication.Qzon
 {
@@ -9,10 +10,10 @@ namespace Orchid.Web.Authentication.Qzon
     {
         public QzonAuthenticationOptions()
         {
-
+            
         }
 
-        //     access_type. Set to 'offline' to request a refresh token.
+        // access_type. Set to 'offline' to request a refresh token.
         public string AccessType { get; set; }
     }
 }

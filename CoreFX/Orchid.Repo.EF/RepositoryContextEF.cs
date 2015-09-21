@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Microsoft.Data.Entity;
+using Microsoft.Framework.Internal;
 using Orchid.Core.Utilities;
 
 namespace Orchid.Repo.EF
@@ -63,7 +64,7 @@ namespace Orchid.Repo.EF
                     var entity = Context.Set<T>().FirstOrDefault(_ => _.Equals(value));
                     if (entity != null)
                     {
-                        // TODO: 
+                        // TODO: EF7 hasnt implement such function, ref: https://github.com/aspnet/EntityFramework/issues/1999
                         //Context.Entry<T>(entity).SetValues(value);
                     }
                     else

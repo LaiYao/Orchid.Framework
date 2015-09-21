@@ -2,7 +2,7 @@
 
 namespace Orchid.Core.Utilities
 {
-    public static class ExceptionExtention
+    public static class ExceptionExtensions
     {
         public static void LogAndThrow(this Exception exception)
         {   

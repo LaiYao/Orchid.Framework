@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using JetBrains.Annotations;
+using Microsoft.Framework.Internal;
 
 namespace Orchid.Core.Utilities
 {
-    public static class LinqExtention
+    public static class LinqExtensions
     {
         #region | WhereIf |
 
@@ -22,8 +22,6 @@ namespace Orchid.Core.Utilities
 
         public static IQueryable<T> PageBy<T>([NotNull]this IQueryable<T> source, int pageIndex, int pageSize)
         {
-            Check.NotNull(source, nameof(source));
-
             return source.Skip(pageIndex * pageSize).Take(pageSize);
         }
 

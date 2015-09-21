@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using JetBrains.Annotations;
+using Microsoft.Framework.Internal;
 using Orchid.Core.Utilities;
 using Orchid.Repo.Contracts;
 
 namespace Orchid.Repo
 {
     public abstract class Repository<T> : IRepository<T>
-        where T : class
+        where T : class, new()
     {
         #region | Properties |
 
@@ -85,12 +85,12 @@ namespace Orchid.Repo
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, out int itemsCount, out int pagesCount, int countPerPage = 10)
+        public virtual PagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<Tuple<IEnumerable<T>, int, int>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public virtual Task<PagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             throw new NotImplementedException();
         }
@@ -105,12 +105,12 @@ namespace Orchid.Repo
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, out int itemsCount, out int pagesCount, int countPerPage = 10)
+        public virtual PagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<Tuple<IEnumerable<T>, int, int>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public virtual Task<PagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             throw new NotImplementedException();
         }

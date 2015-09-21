@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using JetBrains.Annotations;
+using Microsoft.Framework.Internal;
 
 namespace Orchid.Core.Utilities
 {
     [DebuggerStepThrough]
     public static class Check
     {
-        [ContractAnnotation("value:null => halt")]
-        public static T NotNull<T>([NoEnumeration] T value, [InvokerParameterName] [NotNull] string parameterName)
+        public static T NotNull<T>(T value, [NotNull] string parameterName)
         {
             if (ReferenceEquals(value, null))
             {
@@ -23,10 +22,9 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        [ContractAnnotation("value:null => halt")]
         public static T NotNull<T>(
-            [NoEnumeration] T value,
-            [InvokerParameterName] [NotNull] string parameterName,
+           T value,
+            [NotNull] string parameterName,
             [NotNull] string propertyName)
         {
             if (ReferenceEquals(value, null))
@@ -40,8 +38,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        [ContractAnnotation("value:null => halt")]
-        public static IReadOnlyList<T> NotEmpty<T>(IReadOnlyList<T> value, [InvokerParameterName] [NotNull] string parameterName)
+        public static IReadOnlyList<T> NotEmpty<T>(IReadOnlyList<T> value, [NotNull] string parameterName)
         {
             NotNull(value, parameterName);
 
@@ -55,8 +52,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        [ContractAnnotation("value:null => halt")]
-        public static string NotEmpty(string value, [InvokerParameterName] [NotNull] string parameterName)
+        public static string NotEmpty(string value, [NotNull] string parameterName)
         {
             Exception e = null;
             if (ReferenceEquals(value, null))
@@ -78,7 +74,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        public static string NullButNotEmpty(string value, [InvokerParameterName] [NotNull] string parameterName)
+        public static string NullButNotEmpty(string value, [NotNull] string parameterName)
         {
             if (!ReferenceEquals(value, null)
                 && value.Length == 0)
@@ -91,7 +87,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        public static IReadOnlyList<T> HasNoNulls<T>(IReadOnlyList<T> value, [InvokerParameterName] [NotNull] string parameterName)
+        public static IReadOnlyList<T> HasNoNulls<T>(IReadOnlyList<T> value, [NotNull] string parameterName)
             where T : class
         {
             NotNull(value, parameterName);
@@ -106,7 +102,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        public static T IsDefined<T>(T value, [InvokerParameterName] [NotNull] string parameterName)
+        public static T IsDefined<T>(T value, [NotNull] string parameterName)
             where T : struct
         {
             if (!Enum.IsDefined(typeof(T), value))
@@ -119,7 +115,7 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
-        public static Type ValidEntityType(Type value, [InvokerParameterName] [NotNull] string parameterName)
+        public static Type ValidEntityType(Type value, [NotNull] string parameterName)
         {
             if (!value.GetTypeInfo().IsClass)
             {
