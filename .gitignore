@@ -210,3 +210,4 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/NETFX/Orchid.SeedWork.Repository.EF/RepositoryEF.cs
