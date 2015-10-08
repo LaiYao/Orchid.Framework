@@ -52,6 +52,20 @@ namespace Orchid.Core.Utilities
             return value;
         }
 
+        public static IEnumerable<T> NotEmpty<T>(IEnumerable<T> value, [NotNull] string parameterName)
+        {
+            NotNull(value, parameterName);
+
+            if (value.Count() == 0)
+            {
+                NotEmpty(parameterName, nameof(parameterName));
+
+                //throw new ArgumentException(Strings.CollectionArgumentIsEmpty(parameterName));
+            }
+
+            return value;
+        }
+
         public static string NotEmpty(string value, [NotNull] string parameterName)
         {
             Exception e = null;

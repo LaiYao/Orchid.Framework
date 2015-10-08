@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Orchid.Repo.Contracts;
 
 namespace Orchid.Repo
 {
-    public class PagingResult<T> where T : class, new()
+    public class PagingResult<T> : IPagingResult<T> where T : class, new()
     {
         public IEnumerable<T> Items { get; set; }
 

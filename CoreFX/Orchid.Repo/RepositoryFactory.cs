@@ -7,7 +7,7 @@ namespace Orchid.Repo
     {
         #region | IRepositoryFactory |
 
-        public abstract IRepository<T> Create<T>() where T : class, new();
+        public abstract IRepository<T> Create<T>();
 
         #endregion
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Orchid.Repo.Contracts
 {
-    public interface IRepository<T> : IDisposable where T : class, new()
+    public interface IRepository<T> : IDisposable
     {
         IEnumerable<T> AllItems { get; }
 
@@ -32,7 +32,7 @@ namespace Orchid.Repo.Contracts
         /// <param name="pageIndex">页码</param>
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns></returns>
-        PagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        IPagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
         /// <summary>
         /// 返回分页过的查询结果的异步实现
         /// </summary>
@@ -42,7 +42,7 @@ namespace Orchid.Repo.Contracts
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns>
         /// </returns>
-        Task<PagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        Task<IPagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
 
         IEnumerable<T> FindAll();
         Task<IEnumerable<T>> FindAllAsync();
@@ -54,7 +54,7 @@ namespace Orchid.Repo.Contracts
         /// <param name="pageIndex">页码</param>
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns></returns>
-        PagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        IPagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
         /// <summary>
         /// 返回分页过的结果
         /// </summary>
@@ -65,6 +65,6 @@ namespace Orchid.Repo.Contracts
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns>
         /// </returns>
-        Task<PagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        Task<IPagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
     }
 }

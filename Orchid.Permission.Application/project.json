@@ -1,16 +1,16 @@
-{
+﻿{
     "version": "1.0.0-*",
-    "description": "Orchid.DDD.CQRS Class Library",
+    "description": "Orchid.Permission.Application Class Library",
     "authors": [ "遥" ],
     "tags": [ "" ],
     "projectUrl": "",
     "licenseUrl": "",
 
     "dependencies": {
-        "Orchid.DDD.Domain": "1.0.0-*"
     },
 
     "frameworks": {
-        "dnx451": { }
+        "dnx451": { },
+        "dnxcore50": { }
     }
 }

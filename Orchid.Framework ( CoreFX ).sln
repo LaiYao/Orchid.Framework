@@ -41,6 +41,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Permission", "Permission", 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Domain", "CoreFX\Orchid.Permission.Domain\Orchid.Permission.Domain.xproj", "{F12399C6-BE5F-4E27-8442-E966A5A0A087}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F84AC2BB-42B5-42AA-819D-0E97C6F098A0}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Infrastructure.Data", "CoreFX\Orchid.Permission.Infrastructure.Data\Orchid.Permission.Infrastructure.Data.xproj", "{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Application", "Orchid.Permission.Application\Orchid.Permission.Application.xproj", "{7C134F03-26A9-42E8-B366-96AB6234A590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +100,14 @@ Global
 		{F12399C6-BE5F-4E27-8442-E966A5A0A087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F12399C6-BE5F-4E27-8442-E966A5A0A087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F12399C6-BE5F-4E27-8442-E966A5A0A087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C134F03-26A9-42E8-B366-96AB6234A590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C134F03-26A9-42E8-B366-96AB6234A590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C134F03-26A9-42E8-B366-96AB6234A590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C134F03-26A9-42E8-B366-96AB6234A590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,5 +125,7 @@ Global
 		{67D263CF-8D7A-4043-B1B1-AD1314807683} = {E99C3CCB-EEC4-4A22-B459-A6E677CBEA29}
 		{E269D76B-5512-486A-8FB7-55900BCAFDB7} = {1E820C43-C6CA-42F4-8496-EB7C801CA54B}
 		{F12399C6-BE5F-4E27-8442-E966A5A0A087} = {96F9D1BC-52CA-4887-8F78-E57240ED24E7}
+		{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60} = {96F9D1BC-52CA-4887-8F78-E57240ED24E7}
+		{7C134F03-26A9-42E8-B366-96AB6234A590} = {96F9D1BC-52CA-4887-8F78-E57240ED24E7}
 	EndGlobalSection
 EndGlobal

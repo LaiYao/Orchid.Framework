@@ -11,6 +11,12 @@
     },
 
     "frameworks": {
-        "dnx451": { }
+        "dnx451": { },
+        "dnxcore50": {
+            "dependencies": {
+                "System.Linq": "4.0.1-*",
+                "System.Linq.Expressions": "4.0.11-*"
+            }
+        }
     }
 }

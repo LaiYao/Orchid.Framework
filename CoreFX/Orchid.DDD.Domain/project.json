@@ -7,10 +7,16 @@
     "licenseUrl": "",
 
     "dependencies": {
-        "Orchid.Core": "1.0.0-*"
+        "Orchid.Core": "1.0.0-*",
+"Orchid.Repo": "1.0.0-*"
     },
 
     "frameworks": {
-        "dnx451": { }
+        "dnx451": { },
+        "dnxcore50": {
+            "dependencies": {
+                "System.Reflection": "4.1.0-*"
+            }
+        }
     }
 }
