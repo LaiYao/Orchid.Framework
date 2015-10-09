@@ -48,7 +48,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Infrastructure.Data", "CoreFX\Orchid.Permission.Infrastructure.Data\Orchid.Permission.Infrastructure.Data.xproj", "{DC2E5A90-D3EF-4B2C-B8D4-34D1550C2E60}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Application", "Orchid.Permission.Application\Orchid.Permission.Application.xproj", "{7C134F03-26A9-42E8-B366-96AB6234A590}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orchid.Permission.Application", "CoreFX\Orchid.Permission.Application\Orchid.Permission.Application.xproj", "{7C134F03-26A9-42E8-B366-96AB6234A590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

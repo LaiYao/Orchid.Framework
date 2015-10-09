@@ -7,6 +7,10 @@
     "licenseUrl": "",
 
     "dependencies": {
+        "Orchid.Core": "1.0.0-*",
+        "Orchid.Permission.Domain": "1.0.0-*",
+        "Orchid.DDD.Domain": "1.0.0-*",
+        "Orchid.Repo": "1.0.0-*"
     },
 
     "frameworks": {

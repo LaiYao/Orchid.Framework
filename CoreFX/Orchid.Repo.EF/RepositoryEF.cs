@@ -53,7 +53,7 @@ namespace Orchid.Repo.EF
         public override async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> cretiria) 
             => await Task.FromResult(Find(cretiria));
 
-        public override PagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public override IPagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             if (pageIndex < 0) throw new ArgumentOutOfRangeException(nameof(pageIndex));
 
@@ -68,7 +68,7 @@ namespace Orchid.Repo.EF
             return new PagingResult<T>(items, itemsCount, pagesCount);
         }
 
-        public override async Task<PagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public override async Task<IPagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
             => await Task.FromResult(Find(cretiria, orderBy, pageIndex, countPerPage));
 
         public override IEnumerable<T> FindAll()
@@ -79,7 +79,7 @@ namespace Orchid.Repo.EF
         public override async Task<IEnumerable<T>> FindAllAsync() 
             => await Task.FromResult(FindAll());
 
-        public override PagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public override IPagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
         {
             if (pageIndex < 0) throw new ArgumentOutOfRangeException(nameof(pageIndex));
 
@@ -94,7 +94,7 @@ namespace Orchid.Repo.EF
             return new PagingResult<T>(items, itemsCount, pagesCount);
         }
 
-        public override async Task<PagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
+        public override async Task<IPagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10)
             => await Task.FromResult(FindAll(orderBy, pageIndex, countPerPage));
     }
 }
