@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using Microsoft.Framework.Internal;
 
 namespace Orchid.Core.Utilities
 {
-    [DebuggerStepThrough]
     public static class Check
     {
-        public static T NotNull<T>(T value, [NotNull] string parameterName)
+        public static T NotNull<T>(T value, string parameterName)
         {
             if (ReferenceEquals(value, null))
             {
@@ -140,5 +137,19 @@ namespace Orchid.Core.Utilities
 
             return value;
         }
+    }
+
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Parameter |
+                AttributeTargets.Property | AttributeTargets.Delegate |
+                AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    public sealed class NotNullAttribute : Attribute
+    {
+    }
+
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Parameter |
+                    AttributeTargets.Property | AttributeTargets.Delegate |
+                    AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    public sealed class CanBeNullAttribute : Attribute
+    {
     }
 }

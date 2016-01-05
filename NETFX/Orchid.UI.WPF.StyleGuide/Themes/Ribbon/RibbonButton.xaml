@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Orchid.UI.WPF.StyleGuide">
+    <!--ControlTemplate-->
+    <ControlTemplate x:Key="RibbonButtonControlTemplate" TargetType="RibbonButton">
+        <StackPanel x:Name="visualRoot" 
+                    Orientation="Vertical"
+                    Background="{DynamicResource TransparentBrush}">
+            <Image x:Name="PART_Image"
+                   Width="32" Height="32"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="label"
+                       Text="{TemplateBinding Label}"
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Center" 
+                       Margin="2,-1,2,2" />
+        </StackPanel>
+        <ControlTemplate.Triggers>
+            <!--<Trigger Property="ControlSizeDefinition.ImageSize" Value="Small">
+                <Setter Property="Width" TargetName="PART_Image" Value="16" />
+                <Setter Property="Height" TargetName="PART_Image" Value="16" />
+            </Trigger>
+            <Trigger Property="ControlSizeDefinition.IsLabelVisible" Value="False">
+                <Setter Property="Visibility" TargetName="label" Value="Collapsed" />
+            </Trigger>-->
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="visualRoot" Value="{DynamicResource ThemeFocusedFillBrush}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" TargetName="PART_Image" Value="0.5"/>
+                <Setter Property="Opacity" TargetName="label" Value="0.5"/>
+                <Setter Property="Effect" TargetName="PART_Image">
+                    <Setter.Value>
+                        <local:GrayscaleEffect/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                    <Condition Property="IsPressed" Value="False"/>
+                    <Condition Property="IsEnabled" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="visualRoot" Value="{DynamicResource ThemeActiveFillBrush}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsKeyboardFocusWithin" Value="True"/>
+                    <Condition Property="IsPressed" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="visualRoot" Value="{DynamicResource ThemeFocusedFillBrush}"/>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--Style-->
+    <Style TargetType="RibbonButton">
+        <Setter Property="Template" Value="{StaticResource RibbonButtonControlTemplate}" />
+    </Style>
+</ResourceDictionary>

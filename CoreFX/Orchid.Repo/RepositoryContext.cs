@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Orchid.Repo.Contracts;
+using Orchid.Repo.Abstractions;
 
 namespace Orchid.Repo
 {
@@ -18,7 +18,10 @@ namespace Orchid.Repo
         public abstract void RegisterDeleted<T>(T value) where T : class;
 
         public abstract void Commit();
-        public abstract Task CommitAsync();
+        public virtual Task CommitAsync() => Task.Run(() => Commit());
+
+        public abstract void Rollback();
+        public virtual Task RollbackAsync() => Task.Run(() => Rollback());
 
         public abstract void Dispose();
     }

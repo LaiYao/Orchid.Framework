@@ -1,5 +1,5 @@
 ﻿using System;
-using Orchid.Repo.Contracts;
+using Orchid.Repo.Abstractions;
 
 namespace Orchid.Repo
 {

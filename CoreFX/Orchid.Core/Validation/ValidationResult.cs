@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Framework.Internal;
 using Orchid.Core.Utilities;
 
 namespace Orchid.Core.Validation

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Microsoft.Framework.Internal;
 using Orchid.Core.Utilities;
-using Orchid.Repo.Contracts;
+using Orchid.Repo.Abstractions;
 
 namespace Orchid.Repo
 {

@@ -9,7 +9,7 @@
     "dependencies": {
         "Orchid.Repo": "1.0.0-*",
         "EntityFramework.Core": "7.0.0-*",
-        "Microsoft.Framework.NotNullAttribute.Sources": "1.0.0-*"
+        "EntityFramework.Relational": "7.0.0-*"
     },
 
     "frameworks": {

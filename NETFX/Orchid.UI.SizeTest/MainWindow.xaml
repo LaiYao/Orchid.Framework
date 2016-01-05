@@ -1,0 +1,21 @@
+﻿<Window x:Class="Orchid.UI.SizeTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="200" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Rectangle x:Name="recTarget" Height="32" Width="32" Fill="Violet" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Width="80" HorizontalAlignment="Left" Text="{Binding ElementName=recTarget,Path=Width,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Grid.Row="1" Width="80" HorizontalAlignment="Left" Text="{Binding ElementName=recTarget,Path=Height,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+    </Grid>
+</Window>

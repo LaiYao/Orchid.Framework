@@ -11,7 +11,6 @@
         "Microsoft.AspNet.Mvc.Core": "6.0.0-*",
         "Microsoft.Framework.DependencyInjection": "1.0.0-*",
         "Microsoft.Framework.Logging": "1.0.0-*",
-        "Microsoft.Framework.NotNullAttribute.Sources": "1.0.0-*",
         "Orchid.Core": ""
     },
 

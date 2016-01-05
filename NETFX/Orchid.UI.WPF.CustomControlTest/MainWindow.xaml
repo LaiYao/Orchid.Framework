@@ -1,0 +1,16 @@
+﻿<Window x:Class="Orchid.UI.WPF.CustomControlTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:styleGuide="clr-namespace:Orchid.UI.WPF.StyleGuide;assembly=Orchid.UI.WPF.StyleGuide"
+        Style="{DynamicResource BorderlessWindowStyle}"
+        Title="MainWindow" Height="350" Width="525">
+    <styleGuide:CaptionButtons.Items>
+        <CompositeCollection>
+            <Button Content="Test" Width="30" Height="24" />
+            <Button Content="Test" Width="30" Height="24" />
+        </CompositeCollection>
+    </styleGuide:CaptionButtons.Items>
+    <Grid>
+
+    </Grid>
+</Window>

@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Data.Entity;
-using Microsoft.Framework.Internal;
 using Orchid.Core.Utilities;
 
 namespace Orchid.Repo.EF
 {
     public class RepositoryContextEF : RepositoryContext
     {
+        #region | Fields |
+
+        private readonly object _syncObj = new object();
+
+        #endregion
+
         #region | Properties |
 
         public DbContext Context { get; private set; }
@@ -30,79 +33,20 @@ namespace Orchid.Repo.EF
 
         public override void RegisterNew<T>(T value)
         {
-            var autoDetect = Context.ChangeTracker.AutoDetectChangesEnabled;
-            try
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = false;
-
-                Context.Set<T>().Add(value);
-
-                IsCommited = false;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = autoDetect;
-            }
+            Context.Set<T>().Add(value);
+            IsCommited = false;
         }
 
         public override void RegisterModified<T>(T value)
         {
-            var autoDetect = Context.ChangeTracker.AutoDetectChangesEnabled;
-            try
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = false;
-
-                var entry = Context.Entry<T>(value);
-
-                if (entry.State == EntityState.Detached)
-                {
-                    var entity = Context.Set<T>().FirstOrDefault(_ => _.Equals(value));
-                    if (entity != null)
-                    {
-                        // TODO: EF7 hasnt implement such function, ref: https://github.com/aspnet/EntityFramework/issues/1999
-                        //Context.Entry<T>(entity).SetValues(value);
-                    }
-                    else
-                    {
-                        entry.State = EntityState.Modified;
-                    }
-                }
-
-                IsCommited = false;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = autoDetect;
-            }
+            Context.Set<T>().Update(value);
+            IsCommited = false;
         }
 
         public override void RegisterDeleted<T>(T value)
         {
-            var autoDetect = Context.ChangeTracker.AutoDetectChangesEnabled;
-            try
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = false;
-
-                Context.Entry<T>(value).State = EntityState.Deleted;
-
-                IsCommited = false;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                Context.ChangeTracker.AutoDetectChangesEnabled = autoDetect;
-            }
+            Context.Set<T>().Remove(value);
+            IsCommited = false;
         }
 
         public override void Commit()
@@ -110,7 +54,11 @@ namespace Orchid.Repo.EF
             if (IsCommited) return;
             try
             {
-                Context.SaveChanges();
+                lock (_syncObj)
+                {
+                    Context.SaveChanges();
+                    Context.Database.CommitTransaction();
+                }
                 IsCommited = true;
             }
             catch (Exception e)
@@ -119,9 +67,10 @@ namespace Orchid.Repo.EF
             }
         }
 
-        public override async Task CommitAsync()
+        public override void Rollback()
         {
-            await Context.SaveChangesAsync();
+            IsCommited = false;
+            Context.Database.RollbackTransaction();
         }
 
         public override void Dispose()
