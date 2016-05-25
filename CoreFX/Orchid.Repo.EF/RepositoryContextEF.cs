@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using Orchid.Core.Utilities;
 
 namespace Orchid.Repo.EF
@@ -84,9 +84,7 @@ namespace Orchid.Repo.EF
         {
             if (!disposing) return;
 
-            if (Context == null) return;
-
-            Context.Dispose();
+            Context?.Dispose();
 
             this.Context = null;
         }

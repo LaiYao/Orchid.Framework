@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Orchid.Core.Utilities;
 using Orchid.Core.Validation;
-using Orchid.Repo.Contracts;
+using Orchid.Repo.Abstractions;
 
 namespace Orchid.DDD.Domain
 {
@@ -33,11 +33,11 @@ namespace Orchid.DDD.Domain
 
         #region | Members of IDomainService |
 
-        public abstract ValidationResult Add(IEntity<TKey> entity, bool isAutoSave = true);
+        public abstract ValidationResult Add(IEntity<TKey> entity, bool isAutoCommit = true);
 
-        public abstract ValidationResult Remove(IEntity<TKey> entity, bool isAutoSave = true);
+        public abstract ValidationResult Remove(IEntity<TKey> entity, bool isAutoCommit = true);
 
-        public abstract ValidationResult Update(IEntity<TKey> entity, bool isAutoSave = true);
+        public abstract ValidationResult Update(IEntity<TKey> entity, bool isAutoCommit = true);
 
         #endregion
     }

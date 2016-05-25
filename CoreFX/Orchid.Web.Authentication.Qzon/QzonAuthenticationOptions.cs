@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Authentication.OAuth;
+using Microsoft.AspNetCore.Authentication.OAuth;
 
 namespace Orchid.Web.Authentication.Qzon
 {
-    public class QzonAuthenticationOptions: OAuthAuthenticationOptions<IQzonAuthenticationNotifications>
+    public class QzonAuthenticationOptions
     {
         public QzonAuthenticationOptions()
         {

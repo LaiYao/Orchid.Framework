@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Orchid.Repo.Abstractions
 {
     public interface IPagingResult<T>
     {
-        IEnumerable<T> Items { get; }
+        IQueryable<T> Items { get; }
 
         long ItemsCount { get; }
 

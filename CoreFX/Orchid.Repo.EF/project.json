@@ -1,19 +1,30 @@
 ﻿{
     "version": "1.0.0-*",
     "description": "Orchid.Repo.EF Class Library",
-    "authors": [ "遥" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
-
-    "dependencies": {
-        "Orchid.Repo": "1.0.0-*",
-        "EntityFramework.Core": "7.0.0-*",
-        "EntityFramework.Relational": "7.0.0-*"
+    "authors": [
+        "https://github.com/LaiYao/Orchid"
+    ],
+    "packOptions": {
+        "licenseUrl": ""
     },
-
+    "dependencies": {
+        "Orchid.Core": "1.0.0-*",
+        "Orchid.Repo":"1.0.0-*",
+        "Microsoft.EntityFrameworkCore":"1.0.0-*"
+    },
     "frameworks": {
-        "dnx451": { },
-        "dnxcore50": { }
+        "net451": {},
+        "netcoreapp1.0": {
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "version": "1.0.0-*",
+                    "type": "platform"
+                }
+            },
+            "imports": [
+                "dnxcore50",
+                "portable-net451+win8"
+            ]
+        }
     }
 }

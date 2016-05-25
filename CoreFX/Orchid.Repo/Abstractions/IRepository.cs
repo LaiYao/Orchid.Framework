@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace Orchid.Repo.Abstractions
 {
-    public interface IRepository<T> : IDisposable
+    public interface IRepository<T>
     {
-        IEnumerable<T> AllItems { get; }
+        IQueryable<T> AllItems { get; }
 
-        IRepositoryContext Context { get; }
+        void Add(T value, bool isAutoCommit = true);
 
-        void Add(T value, bool isAutoSave = true);
+        void Remove(T value, bool isAutoCommit = true);
 
-        void Remove(T value, bool isAutoSave = true);
-
-        void Update(T value, bool isAutoSave = true);
+        void Update(T value, bool isAutoCommit = true);
 
         bool Any(Expression<Func<T, bool>> cretiria);
         Task<bool> AnyAsync(Expression<Func<T, bool>> cretiria);
 
-        IEnumerable<T> Find(Expression<Func<T, bool>> cretiria);
-        Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> cretiria);
+        IQueryable<T> Find(Expression<Func<T, bool>> cretiria);
+        Task<IQueryable<T>> FindAsync(Expression<Func<T, bool>> cretiria);
 
         /// <summary>
         /// 返回分页过的查询结果
@@ -44,8 +42,8 @@ namespace Orchid.Repo.Abstractions
         /// </returns>
         Task<IPagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
 
-        IEnumerable<T> FindAll();
-        Task<IEnumerable<T>> FindAllAsync();
+        IQueryable<T> FindAll();
+        Task<IQueryable<T>> FindAllAsync();
 
         /// <summary>
         /// 返回分页过的结果

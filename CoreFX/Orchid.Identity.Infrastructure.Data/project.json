@@ -1,0 +1,20 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "Orchid.Identity.Infrastructure.Data Class Library",
+    "authors": [ "遥" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "Orchid.DDD.Domain": "1.0.0-*",
+        "Orchid.Repo": "1.0.0-*",
+        "Orchid.Repo.EF": "1.0.0-*",
+        "Orchid.Identity.Domain": "1.0.0-*"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    }
+}

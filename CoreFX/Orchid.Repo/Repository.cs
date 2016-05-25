@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -8,25 +7,15 @@ using Orchid.Repo.Abstractions;
 
 namespace Orchid.Repo
 {
-    public abstract class Repository<T> : IRepository<T>
+    public abstract class Repository<T, TContext> : IRepository<T>, IDisposable
         where T : class, new()
+        where TContext : IRepositoryContext
     {
         #region | Properties |
 
-        IRepositoryContext _Context;
-        public IRepositoryContext Context
-        {
-            get { return _Context; }
-            private set
-            {
-                if (_Context != value)
-                {
-                    _Context = value;
-                }
-            }
-        }
+        protected TContext Context { get; private set; }
 
-        public IEnumerable<T> AllItems
+        public IQueryable<T> AllItems
         {
             get { return FindAll(); }
         }
@@ -35,33 +24,33 @@ namespace Orchid.Repo
 
         #region | Ctor |
 
-        protected Repository([NotNull] IRepositoryContext repositoryContext)
+        protected Repository(TContext repositoryContext)
         {
             Check.NotNull(repositoryContext, nameof(repositoryContext));
 
-            _Context = repositoryContext;
+            Context = repositoryContext;
         }
 
         #endregion
 
         #region | Members of IRepository |
 
-        public void Add(T value, bool isAutoSave = true)
+        public void Add(T value, bool isAutoCommit = true)
         {
-            _Context.RegisterNew(value);
-            if (isAutoSave) _Context.Commit();
+            Context.RegisterNew(value);
+            if (isAutoCommit) Context.Commit();
         }
 
-        public virtual void Remove(T value, bool isAutoSave = true)
+        public virtual void Remove(T value, bool isAutoCommit = true)
         {
-            _Context.RegisterDeleted(value);
-            if (isAutoSave) _Context.Commit();
+            Context.RegisterDeleted(value);
+            if (isAutoCommit) Context.Commit();
         }
 
-        public virtual void Update(T value, bool isAutoSave = true)
+        public virtual void Update(T value, bool isAutoCommit = true)
         {
-            _Context.RegisterModified(value);
-            if (isAutoSave) _Context.Commit();
+            Context.RegisterModified(value);
+            if (isAutoCommit) Context.Commit();
         }
 
         public virtual bool Any(Expression<Func<T, bool>> cretiria)
@@ -74,12 +63,12 @@ namespace Orchid.Repo
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> Find(Expression<Func<T, bool>> cretiria)
+        public virtual IQueryable<T> Find(Expression<Func<T, bool>> cretiria)
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> cretiria)
+        public virtual Task<IQueryable<T>> FindAsync(Expression<Func<T, bool>> cretiria)
         {
             throw new NotImplementedException();
         }
@@ -94,12 +83,12 @@ namespace Orchid.Repo
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> FindAll()
+        public virtual IQueryable<T> FindAll()
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<IEnumerable<T>> FindAllAsync()
+        public virtual Task<IQueryable<T>> FindAllAsync()
         {
             throw new NotImplementedException();
         }
@@ -129,9 +118,7 @@ namespace Orchid.Repo
         {
             if (!disposing) return;
 
-            Context?.Dispose();
-
-            this.Context = null;
+            this.Context = default(TContext);
         }
 
         #endregion

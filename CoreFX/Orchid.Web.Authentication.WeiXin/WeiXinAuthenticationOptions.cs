@@ -1,0 +1,4 @@
+namespace Orchid.Authentication.WeiXin
+{
+    
+}

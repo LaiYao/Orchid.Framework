@@ -48,7 +48,7 @@ namespace Orchid.Caching.Abstractions
         void Clear(string region = "", CacheLevel cacheLevel = CacheLevel.Global);
 
         /// <summary>
-        /// 是否现成安全
+        /// 是否线程安全
         /// </summary>
         bool IsThreadSafe { get; }
 

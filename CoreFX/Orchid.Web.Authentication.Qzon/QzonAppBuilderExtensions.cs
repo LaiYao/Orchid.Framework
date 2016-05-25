@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Framework.Internal;
 using Orchid.Web.Authentication.Qzon;
 
 namespace Microsoft.AspNet.Builder

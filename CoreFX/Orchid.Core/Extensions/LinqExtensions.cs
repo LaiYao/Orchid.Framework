@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using Orchid.Core.Utilities;
 
-namespace Orchid.Core.Utilities
+namespace Orchid.Core.Extensions
 {
     public static class LinqExtensions
     {

@@ -1,20 +1,28 @@
 ﻿{
     "version": "1.0.0-*",
     "description": "Orchid.Web.MVC Class Library",
-    "authors": [ "遥" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
-
-    "dependencies": {
-        "Microsoft.AspNet.Mvc": "6.0.0-*",
-        "Microsoft.AspNet.Mvc.Core": "6.0.0-*",
-        "Microsoft.Framework.DependencyInjection": "1.0.0-*",
-        "Microsoft.Framework.Logging": "1.0.0-*",
-        "Orchid.Core": ""
+    "authors": [
+        "https://github.com/LaiYao/Orchid"
+    ],
+    "packOptions": {
+        "licenseUrl": ""
     },
-
+    "dependencies": {
+        "Orchid.Core":"1.0.0-*"
+    },
     "frameworks": {
-        "dnx451": { }
+        "net451": {},
+        "netcoreapp1.0": {
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "version": "1.0.0-*",
+                    "type": "platform"
+                }
+            },
+            "imports": [
+                "dnxcore50",
+                "portable-net451+win8"
+            ]
+        }
     }
 }

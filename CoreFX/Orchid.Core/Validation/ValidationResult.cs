@@ -28,7 +28,7 @@ namespace Orchid.Core.Validation
 
         public ValidationResult Add([NotNull]params string[] errors)
         {
-            Check.NotEmpty(errors, nameof(errors));
+            Check.NotNull(errors, nameof(errors));
             Errors.AddRange(errors);
             return this;
         }

@@ -1,12 +1,8 @@
 ﻿using System;
 
-namespace Orchid.Core.Utilities
+namespace Orchid.Core.Extensions
 {
     public static class ExceptionExtensions
     {
-        public static void LogAndThrow(this Exception exception)
-        {   
-            throw exception;
-        }
     }
 }

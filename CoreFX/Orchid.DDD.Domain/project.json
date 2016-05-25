@@ -1,23 +1,29 @@
 {
     "version": "1.0.0-*",
     "description": "Orchid.DDD.Domain Class Library",
-    "authors": [ "遥" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
-
+    "authors": [
+        "https://github.com/LaiYao/Orchid"
+    ],
+    "packOptions": {
+        "licenseUrl": ""
+    },
     "dependencies": {
         "Orchid.Core": "1.0.0-*",
         "Orchid.Repo": "1.0.0-*"
     },
-
     "frameworks": {
-        "dnx451": { },
-        "dnxcore50": {
+        "net451": {},
+        "netcoreapp1.0": {
             "dependencies": {
-                "System.Reflection": "4.1.0-*",
-                "System.Reflection.TypeExtensions": "4.0.1-*"
-            }
+                "Microsoft.NETCore.App": {
+                    "version": "1.0.0-*",
+                    "type": "platform"
+                }
+            },
+            "imports": [
+                "dnxcore50",
+                "portable-net451+win8"
+            ]
         }
     }
 }
