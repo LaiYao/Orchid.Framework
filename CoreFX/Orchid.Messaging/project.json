@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "authors": [
+    "https://github.com/LaiYao/Orchid"
+  ],
+  "packOptions": {
+    "licenseUrl": ""
+  },
+  "dependencies": {},
+  "frameworks": {
+    "net451": {},
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-*",
+          "type": "platform"
+        }
+      },
+      "imports": [
+        "dnxcore50",
+        "portable-net451+win8"
+      ]
+    }
+  }
+}

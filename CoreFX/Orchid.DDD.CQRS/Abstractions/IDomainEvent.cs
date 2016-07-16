@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Orchid.DDD.Domain
+namespace Orchid.DDD.CQRS
 {
-    public interface IDomainEvent
+    public interface IDomainEvent:IEvent
     {
         DateTime OcurrendOn { get; }
     }

@@ -19,13 +19,11 @@ namespace Orchid.DDD.Domain
                 return false;
             }
 
-            // Same instances must be considered as equal
             if (ReferenceEquals(this, obj))
             {
                 return true;
             }
 
-            // Transient objects are not considered as equal
             var other = (Entity<TKey>)obj;
             if (IsTransient() && other.IsTransient())
             {

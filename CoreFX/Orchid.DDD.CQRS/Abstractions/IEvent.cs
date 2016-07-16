@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Orchid.DDD.CQRS.Abstractions
+﻿namespace Orchid.DDD.CQRS
 {
     public interface IEvent
     {
-
     }
 }

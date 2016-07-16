@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Orchid.DDD.Domain
+namespace Orchid.DDD.CQRS
 {
-    public abstract class AggregateRootWithEvent<TKey> : AggregateRoot<TKey>, IAggregateRootWithEvent<TKey>
+    public abstract class AggregateRoot<TKey> : Orchid.DDD.Domain.AggregateRoot<TKey>, IAggregateRoot<TKey>
     {
         #region | Fields |
 
@@ -19,7 +16,7 @@ namespace Orchid.DDD.Domain
 
         #region | Ctor |
 
-        public AggregateRootWithEvent()
+        public AggregateRoot()
         {
             Initialize();
         }

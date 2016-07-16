@@ -1,17 +1,31 @@
 {
     "version": "1.0.0-*",
     "description": "Orchid.DDD.CQRS Class Library",
-    "authors": [ "遥" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
-
+    "authors": [
+        "https://github.com/LaiYao/Orchid"
+    ],
+    "packOptions": {
+        "licenseUrl": ""
+    },
     "dependencies": {
+        "Orchid.Core": "1.0.0-*",
+        "Orchid.Repo": "1.0.0-*",
+        "Orchid.Messaging": "1.0.0-*",
         "Orchid.DDD.Domain": "1.0.0-*"
     },
-
     "frameworks": {
-        "dnx451": { },
-        "dnxcore50": { }
+        "net451": {},
+        "netcoreapp1.0": {
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "version": "1.0.0-*",
+                    "type": "platform"
+                }
+            },
+            "imports": [
+                "dnxcore50",
+                "portable-net451+win8"
+            ]
+        }
     }
 }
