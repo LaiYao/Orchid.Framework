@@ -14,7 +14,7 @@ namespace Orchid.DDD.Domain
         #endregion
     }
 
-    public abstract class AggregateRoot : AggregateRoot<int>, IAggregateRoot
+    public abstract class AggregateRoot : AggregateRoot<Guid>
     {
     }
 }

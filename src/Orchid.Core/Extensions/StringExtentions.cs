@@ -1,5 +1,5 @@
 using System;
-using System.Security.Cryptography;
+//using System.Security.Cryptography;
 using System.Text;
 
 namespace Orchid.Core.Extensions
@@ -18,34 +18,34 @@ namespace Orchid.Core.Extensions
         public static bool HasValue(this string value)
         => !value.IsEmpty();
 
-        public static string Hash(this string value, Encoding encoding, bool toBase64 = false)
-        {
-            if (value.IsEmpty())
-                return value;
+        //public static string Hash(this string value, Encoding encoding, bool toBase64 = false)
+        //{
+        //    if (value.IsEmpty())
+        //        return value;
 
-            using (var md5 = MD5.Create())
-            {
-                byte[] data = encoding.GetBytes(value);
+        //    using (var md5 = MD5.Create())
+        //    {
+        //        byte[] data = encoding.GetBytes(value);
 
-                if (toBase64)
-                {
-                    byte[] hash = md5.ComputeHash(data);
-                    return Convert.ToBase64String(hash);
-                }
-                else
-                {
-                    StringBuilder sb = new StringBuilder();
+        //        if (toBase64)
+        //        {
+        //            byte[] hash = md5.ComputeHash(data);
+        //            return Convert.ToBase64String(hash);
+        //        }
+        //        else
+        //        {
+        //            StringBuilder sb = new StringBuilder();
 
-                    byte[] hashBytes = md5.ComputeHash(data);
-                    foreach (byte b in hashBytes)
-                    {
-                        sb.Append(b.ToString("x2").ToLower());
-                    }
+        //            byte[] hashBytes = md5.ComputeHash(data);
+        //            foreach (byte b in hashBytes)
+        //            {
+        //                sb.Append(b.ToString("x2").ToLower());
+        //            }
 
-                    return sb.ToString();
-                }
-            }
-        }
+        //            return sb.ToString();
+        //        }
+        //    }
+        //}
 
         public static string Mask(this string value, int length)
         {

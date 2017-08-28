@@ -1,6 +1,9 @@
 ﻿namespace Orchid.Core.Abstractions
 {
-    public class ILifeTraceable
+    /// <summary>
+    /// Represent currrent life status of the object
+    /// </summary>
+    public interface ILifeTraceable
     {
         bool IsNew { get; set; }
         bool IsDirty { get; set; }

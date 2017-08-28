@@ -1,7 +1,10 @@
 ﻿namespace Orchid.Core.Abstractions
 {
+    /// <summary>
+    /// Represent the 
+    /// </summary>
     public interface INamable
     {
-        string Name { get; set; }
+        string Name { get; }
     }
 }

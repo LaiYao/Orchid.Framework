@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Orchid.Cloud.ServiceRegistry.K8s</AssemblyName>
+    <PackageId>Orchid.Cloud.ServiceRegistry.K8s</PackageId>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Orchid.Cloud\Orchid.Cloud.csproj" />
+    <ProjectReference Include="..\src\Orchid.Cloud.ServiceRegistry\Orchid.Cloud.ServiceRegistry.csproj" />
+  </ItemGroup>
+
+</Project>

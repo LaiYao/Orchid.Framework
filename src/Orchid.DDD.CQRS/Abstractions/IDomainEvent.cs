@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Orchid.DDD.CQRS
+namespace Orchid.DDD.CQRS.Abstractions
 {
     public interface IDomainEvent:IEvent
     {

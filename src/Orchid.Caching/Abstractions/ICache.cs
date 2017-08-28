@@ -7,6 +7,9 @@ namespace Orchid.Caching.Abstractions
 {
     public interface ICache
     {
+        /// <summary>
+        /// 缓存级别
+        /// </summary>
         CacheLevel CacheLevel { get; }
 
         /// <summary>
@@ -16,7 +19,16 @@ namespace Orchid.Caching.Abstractions
         /// <param name="region">区域名称</param>
         /// <param name="value">缓存值</param>
         /// <param name="cacheTime">缓存过期时间，单位分钟</param>
-        void Set<T>(string key, string region, T value,int cacheTime);
+        void Set<T>(string key, string region, T value, int cacheTime);
+
+        /// <summary>
+        /// 设置缓存值到指定Region
+        /// </summary>
+        /// <param name="key">缓存键</param>
+        /// <param name="region">区域名称</param>
+        /// <param name="value">缓存值</param>
+        /// <param name="cacheTime">缓存过期时间，单位分钟</param>
+        Task SetAsync<T>(string key, string region, T value, int cacheTime);
 
         /// <summary>
         /// 获取指定区域的缓存值
@@ -27,6 +39,14 @@ namespace Orchid.Caching.Abstractions
         T Get<T>(string key, string region);
 
         /// <summary>
+        /// 获取指定区域的缓存值
+        /// </summary>
+        /// <param name="key">缓存键</param>
+        /// <param name="region">区域名称</param>
+        /// <returns>缓存值</returns>
+        Task<T> GetAsync<T>(string key, string region);
+
+        /// <summary>
         /// 移除指定区域的缓存条目
         /// </summary>
         /// <param name="key">缓存键</param>
@@ -34,10 +54,26 @@ namespace Orchid.Caching.Abstractions
         void Remove(string key, string region);
 
         /// <summary>
+        /// 移除指定区域的缓存条目
+        /// </summary>
+        /// <param name="key">缓存键</param>
+        /// <param name="region">区域名称</param>
+        Task RemoveAsync(string key, string region);
+
+        /// <summary>
         /// 是否存在缓存键
         /// </summary>
         /// <param name="key">缓存键</param>
+        /// <param name="region">区域名称</param>
         /// <returns></returns>
         bool Contains(string key, string region);
+
+        /// <summary>
+        /// 是否存在缓存键
+        /// </summary>
+        /// <param name="key">缓存键</param>
+        /// <param name="region">区域名称</param>
+        /// <returns></returns>
+        Task<bool> ContainsAsync(string key, string region);
     }
 }

@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  omp.webapi:
+    image: omp.webapi
+    build:
+      context: ./examples/OMP/OMP.WebAPI
+      dockerfile: Dockerfile
+
+  omp.api.website:
+    image: omp.api.website
+    build:
+      context: ./examples/OMP/OMP.Api.Website
+      dockerfile: Dockerfile
+
+  omp.website:
+    image: omp.website
+    build:
+      context: ./examples/OMP/OMP.Website
+      dockerfile: Dockerfile
+
+  orchid.cloud.agent:
+    image: orchid.cloud.agent
+    build:
+      context: ./src/Orchid.Cloud.Agent
+      dockerfile: Dockerfile

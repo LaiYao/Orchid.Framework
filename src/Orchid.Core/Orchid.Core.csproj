@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Orchid.Core Class Library</Description>
+    <Copyright>LaiYao@live.cn</Copyright>
+    <AssemblyTitle>Orchid.Core Class Library</AssemblyTitle>
+    <Authors>https://github.com/LaiYao/</Authors>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Orchid.Core</AssemblyName>
+    <PackageId>Orchid.Core</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

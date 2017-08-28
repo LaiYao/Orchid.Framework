@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Orchid.Core\Orchid.Core.csproj" />
+    <ProjectReference Include="..\..\..\src\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj" />
+    <ProjectReference Include="..\..\..\src\Orchid.Repo\Orchid.Repo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>

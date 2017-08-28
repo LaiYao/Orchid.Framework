@@ -5,7 +5,7 @@ namespace Orchid.DDD.Domain
 {
     public abstract class Entity<TKey> : IEntity<TKey>
     {
-        public TKey Id { get; set; }
+        public virtual TKey Id { get; set; }
 
         public bool IsTransient()
         {

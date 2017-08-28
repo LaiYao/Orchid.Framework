@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Orchid.DDD.Domain Class Library</Description>
+    <Authors>https://github.com/LaiYao/Orchid</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Orchid.DDD.Domain</AssemblyName>
+    <PackageId>Orchid.DDD.Domain</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
+    <ProjectReference Include="..\Orchid.Repo\Orchid.Repo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>

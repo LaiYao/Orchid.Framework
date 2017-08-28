@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj" />
+    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
+  </ItemGroup>
+
+</Project>

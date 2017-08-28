@@ -1,0 +1,10 @@
+﻿{
+    "CloudApplication": {
+        "Name": "Default",
+        "Uri": "localhost",
+        "port": "80"
+    },
+    "CloudApplicationRunListeners": [
+        "Orchid.Cloud.CloudApplicationRunListener"
+    ]
+}

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.Cloud.Admin.Abstractions\Orchid.Cloud.Admin.Abstractions.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.CircuitBreaker\Orchid.Cloud.CircuitBreaker.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Configuration\Orchid.Cloud.Configuration.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.LoadBalance\Orchid.Cloud.LoadBalance.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Logging\Orchid.Cloud.Logging.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Monitor\Orchid.Cloud.Monitor.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj" />
+    <ProjectReference Include="..\Orchid.Cloud.ServiceRegistry\Orchid.Cloud.ServiceRegistry.csproj" />
+  </ItemGroup>
+
+</Project>

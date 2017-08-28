@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Orchid.Identity.Infrastructure.Data Class Library</Description>
+    <Authors>https://github.com/LaiYao/Orchid</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Orchid.Identity.Infrastructure.Data</AssemblyName>
+    <PackageId>Orchid.Identity.Infrastructure.Data</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj" />
+    <ProjectReference Include="..\Orchid.Repo\Orchid.Repo.csproj" />
+    <ProjectReference Include="..\Orchid.Repo.EF\Orchid.Repo.EF.csproj" />
+    <ProjectReference Include="..\Orchid.Identity.Domain\Orchid.Identity.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="System.ComponentModel" Version="4.0.1-*" />
+    <PackageReference Include="System.Diagnostics.Debug" Version="4.0.11-*" />
+    <PackageReference Include="System.Globalization" Version="4.0.11-*" />
+    <PackageReference Include="System.Linq" Version="4.1.0-*" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.1.0-*" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.0.1-*" />
+  </ItemGroup>
+
+</Project>

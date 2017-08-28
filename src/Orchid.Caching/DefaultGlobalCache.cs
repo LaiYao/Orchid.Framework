@@ -1,7 +1,11 @@
 ﻿using System;
-using Microsoft.Framework.Caching.Distributed;
+using Microsoft.Extensions.Caching.Distributed;
 using Orchid.Core.Utilities;
 using Orchid.Caching.Abstractions;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft;
+using System.Text;
 
 namespace Orchid.Caching
 {
@@ -39,19 +43,65 @@ namespace Orchid.Caching
             throw new NotImplementedException();
         }
 
-        public T Get<T>(string key, string region)
+        public Task<bool> ContainsAsync(string key, string region)
         {
             throw new NotImplementedException();
+        }
+
+        public T Get<T>(string key, string region)
+        {
+            var bytes = _cache.Get(key.ComposeCacheKey(region));
+            if (bytes == null || bytes.Length == 0) return default(T);
+
+            var value = Encoding.UTF8.GetString(bytes);
+            if (value == DefaultCacheManager.FACK_NULL)
+            {
+                return default(T);
+            }
+
+            return JsonConvert.DeserializeObject<T>(value);
+        }
+
+        public async Task<T> GetAsync<T>(string key, string region)
+        {
+            var bytes = await _cache.GetAsync(key.ComposeCacheKey(region));
+            if (bytes == null || bytes.Length == 0) return default(T);
+
+            var value = Encoding.UTF8.GetString(bytes);
+            if (value == DefaultCacheManager.FACK_NULL)
+            {
+                return default(T);
+            }
+
+            return JsonConvert.DeserializeObject<T>(value);
         }
 
         public void Remove(string key, string region)
         {
-            throw new NotImplementedException();
+            _cache.Remove(key.ComposeCacheKey(region));
         }
+
+        public async Task RemoveAsync(string key, string region)
+            => await _cache.RemoveAsync(key.ComposeCacheKey(region));
 
         public void Set<T>(string key, string region, T value, int cacheTime)
         {
-            throw new NotImplementedException();
+            var bytes = value == null ? Encoding.UTF8.GetBytes(DefaultCacheManager.FACK_NULL) : Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(value));
+
+            _cache.Set(key.ComposeCacheKey(region), bytes, new DistributedCacheEntryOptions
+            {
+                SlidingExpiration = TimeSpan.FromSeconds(cacheTime)
+            });
+        }
+
+        public async Task SetAsync<T>(string key, string region, T value, int cacheTime)
+        {
+            var bytes = value == null ? Encoding.UTF8.GetBytes(DefaultCacheManager.FACK_NULL) : Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(value));
+
+            await _cache.SetAsync(key.ComposeCacheKey(region), bytes, new DistributedCacheEntryOptions
+            {
+                SlidingExpiration = TimeSpan.FromSeconds(cacheTime)
+            });
         }
 
         #endregion

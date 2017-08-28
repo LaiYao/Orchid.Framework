@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orchid.DDD.CQRS.Abstractions;
+using System;
 
 namespace Orchid.DDD.CQRS
 {

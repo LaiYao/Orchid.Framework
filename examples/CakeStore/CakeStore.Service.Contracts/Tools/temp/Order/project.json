@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0-*",
+	
+	"buildOptions": {
+		"emitEntryPoint": true,
+		"compile": {
+		  "include": [
+			"*.cs"
+		  ]
+		}
+  },
+
+    "dependencies": {
+        "NETStandard.Library": "1.6.0",
+        "System.Interactive.Async": "3.0.0",
+        "Google.ProtoBuf": "3.1.0",
+        "Grpc.Core": "1.0.1-pre1",
+        "Grpc": "1.0.1-pre1"
+    },
+
+    "frameworks": {
+        "netstandard1.6": {
+            "imports": "dnxcore50"
+        }
+    }
+}

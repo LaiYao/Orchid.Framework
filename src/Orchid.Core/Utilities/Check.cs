@@ -5,6 +5,9 @@ using System.Reflection;
 
 namespace Orchid.Core.Utilities
 {
+    /// <summary>
+    /// check the value whether is null or empty
+    /// </summary>
     public static class Check
     {
         public static T NotNull<T>(

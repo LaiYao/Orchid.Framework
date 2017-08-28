@@ -6,15 +6,15 @@ using Orchid.Repo.Abstractions;
 
 namespace Orchid.Repo
 {
-    public class PagingResult<T> : IPagingResult<T> where T : class, new()
+    public class PagingResult<T> : IPagingResult<T>
     {
-        public IQueryable<T> Items { get; set; }
+        public IEnumerable<T> Items { get; set; }
 
         public long ItemsCount { get; set; }
 
         public int PagesCount { get; set; }
 
-        public PagingResult(IQueryable<T> items, long itemsCount, int pagesCount)
+        public PagingResult(IEnumerable<T> items, long itemsCount, int pagesCount)
         {
             Items = items;
             ItemsCount = itemsCount;

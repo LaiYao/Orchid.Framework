@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNet.Mvc;
-using Microsoft.Framework.Internal;
-using Microsoft.Framework.Logging;
-using Microsoft.AspNet.Routing;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Internal;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Routing;
 using Orchid.Core.Utilities;
 using System;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.AspNet.Mvc.Filters;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Orchid.Web.MVC.Filters
 {

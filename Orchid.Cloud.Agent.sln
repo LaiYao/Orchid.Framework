@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent", "src\Orchid.Cloud.Agent\Orchid.Cloud.Agent.csproj", "{BFE00E7F-9854-457B-B71A-52C0B01AF32C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Abstractions", "src\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj", "{95F374C3-2A4C-4B81-92E6-66EFF90714A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Client", "src\Orchid.Cloud.Agent.Client\Orchid.Cloud.Agent.Client.csproj", "{7C28D0A6-A9CF-467B-A619-A02A9987C4E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE00E7F-9854-457B-B71A-52C0B01AF32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE00E7F-9854-457B-B71A-52C0B01AF32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE00E7F-9854-457B-B71A-52C0B01AF32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE00E7F-9854-457B-B71A-52C0B01AF32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F374C3-2A4C-4B81-92E6-66EFF90714A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F374C3-2A4C-4B81-92E6-66EFF90714A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F374C3-2A4C-4B81-92E6-66EFF90714A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F374C3-2A4C-4B81-92E6-66EFF90714A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C28D0A6-A9CF-467B-A619-A02A9987C4E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C28D0A6-A9CF-467B-A619-A02A9987C4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C28D0A6-A9CF-467B-A619-A02A9987C4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C28D0A6-A9CF-467B-A619-A02A9987C4E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

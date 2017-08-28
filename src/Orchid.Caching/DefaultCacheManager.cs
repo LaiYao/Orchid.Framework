@@ -2,6 +2,7 @@
 using System.Threading;
 using Orchid.Core.Utilities;
 using Orchid.Caching.Abstractions;
+using System.Threading.Tasks;
 
 namespace Orchid.Caching
 {
@@ -15,9 +16,9 @@ namespace Orchid.Caching
 
         protected readonly ICache _globalCache;
 
-        //private const string FACK_NULL = "__[NULL]__";
+        internal const string FACK_NULL = "__[NULL]__";
 
-        private string _defaultRegion = "__[DEFAULT]__";
+        string _defaultRegion = "__[DEFAULT]__";
 
         #endregion
 
@@ -60,7 +61,7 @@ namespace Orchid.Caching
         {
             Check.NotEmpty(key, nameof(key));
 
-            var cache = GetCurrentCache(cacheLevel);
+            var cache = GetCacheByLevel(cacheLevel);
             var regionName = string.IsNullOrEmpty(region) ? _defaultRegion : region;
 
             EnterWriteLock();
@@ -75,7 +76,7 @@ namespace Orchid.Caching
             Check.NotEmpty(key, nameof(key));
             Check.NotNull(acquirer, nameof(acquirer));
 
-            var cache = GetCurrentCache(cacheLevel);
+            var cache = GetCacheByLevel(cacheLevel);
             var regionName = string.IsNullOrEmpty(region) ? _defaultRegion : region;
             if (cache.Contains(key, regionName))
             {
@@ -106,7 +107,7 @@ namespace Orchid.Caching
         {
             Check.NotEmpty(key, nameof(key));
 
-            var cache = GetCurrentCache(cacheLevel);
+            var cache = GetCacheByLevel(cacheLevel);
             var regionName = string.IsNullOrEmpty(region) ? _defaultRegion : region;
 
             EnterWriteLock();
@@ -125,7 +126,7 @@ namespace Orchid.Caching
         {
             Check.NotEmpty(key, nameof(key));
 
-            var cache = GetCurrentCache(cacheLevel);
+            var cache = GetCacheByLevel(cacheLevel);
             var regionName = string.IsNullOrEmpty(region) ? _defaultRegion : region;
 
             return cache.Contains(key, regionName);
@@ -137,6 +138,41 @@ namespace Orchid.Caching
         }
 
         public void Clear(string region = "", CacheLevel cacheLevel = CacheLevel.Global)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetAsync<T>(string key, T value, string region = "", CacheLevel cacheLevel = CacheLevel.Global, int? cacheTime = default(int?))
+        {
+            return GetCacheByLevel(cacheLevel).SetAsync(key, region, value, cacheTime.Value);
+        }
+
+        public T Get<T>(string key, string region = "", CacheLevel cacheLevel = CacheLevel.Global, int? cacheTime = default(int?))
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T> GetAsync<T>(string key, string region = "", CacheLevel cacheLevel = CacheLevel.Global, int? cacheTime = default(int?))
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveAsync(string key, string region = "", CacheLevel cacheLevel = CacheLevel.Global)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> ContainsAsync(string key, string region = "", CacheLevel cacheLevel = CacheLevel.Global)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ClearAllAsync(CacheLevel cacheLevel = CacheLevel.Global)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ClearAsync(string region = "", CacheLevel cacheLevel = CacheLevel.Global)
         {
             throw new NotImplementedException();
         }
@@ -163,9 +199,11 @@ namespace Orchid.Caching
 
         #endregion
 
-        private ICache GetCurrentCache(CacheLevel cacheLevel)
+        private ICache GetCacheByLevel(CacheLevel cacheLevel)
         {
             return cacheLevel == CacheLevel.Local ? _localCahce : _globalCache;
         }
+
+
     }
 }

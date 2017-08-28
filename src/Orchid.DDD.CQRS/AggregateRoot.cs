@@ -1,38 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Orchid.DDD.CQRS.Abstractions;
 
 namespace Orchid.DDD.CQRS
 {
     public abstract class AggregateRoot<TKey> : Orchid.DDD.Domain.AggregateRoot<TKey>, IAggregateRoot<TKey>
     {
-        #region | Fields |
-
-        Queue<IDomainEvent> _uncommettedEvents;
-
-        #endregion
-
         #region | Properties |
 
-        #endregion
-
-        #region | Ctor |
-
-        public AggregateRoot()
-        {
-            Initialize();
-        }
+        public Queue<IDomainEvent> UncommettedEvents { get; private set; } = new Queue<IDomainEvent>();
 
         #endregion
 
-        protected virtual void RaiseEvent(IDomainEvent @event)
-            => _uncommettedEvents.Enqueue(@event);
+        public virtual void RaiseEvent(IDomainEvent @event)
+            => UncommettedEvents.Enqueue(@event);
 
-        protected virtual void Initialize()
-            => _uncommettedEvents = new Queue<IDomainEvent>();
+        public virtual void ClearUncommettedEvents()
+            => UncommettedEvents.Clear();
+    }
 
-        public void ClearUncommettedEvents()
-            => _uncommettedEvents.Clear();
-
-        public IEnumerable<IDomainEvent> GetUncommettedEvents()
-            => _uncommettedEvents;
+    public abstract class AggregateRoot : AggregateRoot<Guid>
+    {
     }
 }

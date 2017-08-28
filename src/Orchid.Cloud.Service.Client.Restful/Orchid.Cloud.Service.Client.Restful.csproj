@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Authors>LaiYao@LIVE.CN</Authors>
+    <Company>LaiYao@LIVE.CN</Company>
+    <Product>Orchid.Cloud.Service</Product>
+    <Description />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj" />
+  </ItemGroup>
+
+</Project>

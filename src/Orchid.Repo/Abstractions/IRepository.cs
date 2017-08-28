@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Orchid.Repo.Abstractions
 {
     public interface IRepository<T>
     {
-        IQueryable<T> AllItems { get; }
+        IEnumerable<T> AllItems { get; }
 
-        void Add(T value, bool isAutoCommit = true);
+        void Add(T value);
 
-        void Remove(T value, bool isAutoCommit = true);
+        void Remove(T value);
 
-        void Update(T value, bool isAutoCommit = true);
+        void Update(T value);
 
-        bool Any(Expression<Func<T, bool>> cretiria);
-        Task<bool> AnyAsync(Expression<Func<T, bool>> cretiria);
+        bool Any(Func<T, bool> cretiria);
+        Task<bool> AnyAsync(Func<T, bool> cretiria);
 
-        IQueryable<T> Find(Expression<Func<T, bool>> cretiria);
-        Task<IQueryable<T>> FindAsync(Expression<Func<T, bool>> cretiria);
+        IEnumerable<T> Find(Func<T, bool> cretiria);
+        Task<IEnumerable<T>> FindAsync(Func<T, bool> cretiria);
 
         /// <summary>
         /// 返回分页过的查询结果
@@ -30,7 +29,7 @@ namespace Orchid.Repo.Abstractions
         /// <param name="pageIndex">页码</param>
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns></returns>
-        IPagingResult<T> Find<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        IPagingResult<T> Find<TOrderKey>(Func<T, bool> cretiria, Func<T, TOrderKey> orderBy, int pageIndex, int countPerPage = 10);
         /// <summary>
         /// 返回分页过的查询结果的异步实现
         /// </summary>
@@ -40,10 +39,10 @@ namespace Orchid.Repo.Abstractions
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns>
         /// </returns>
-        Task<IPagingResult<T>> FindAsync<TOrderKey>(Expression<Func<T, bool>> cretiria, Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        Task<IPagingResult<T>> FindAsync<TOrderKey>(Func<T, bool> cretiria, Func<T, TOrderKey> orderBy, int pageIndex, int countPerPage = 10);
 
-        IQueryable<T> FindAll();
-        Task<IQueryable<T>> FindAllAsync();
+        IEnumerable<T> FindAll();
+        Task<IEnumerable<T>> FindAllAsync();
 
         /// <summary>
         /// 返回分页过的结果
@@ -52,7 +51,7 @@ namespace Orchid.Repo.Abstractions
         /// <param name="pageIndex">页码</param>
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns></returns>
-        IPagingResult<T> FindAll<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        IPagingResult<T> FindAll<TOrderKey>(Func<T, TOrderKey> orderBy, int pageIndex, int countPerPage = 10);
         /// <summary>
         /// 返回分页过的结果
         /// </summary>
@@ -63,6 +62,6 @@ namespace Orchid.Repo.Abstractions
         /// <param name="countPerPage">每页条目数，默认为10条</param>
         /// <returns>
         /// </returns>
-        Task<IPagingResult<T>> FindAllAsync<TOrderKey>(Expression<Func<T, TOrderKey>> orderBy, int pageIndex, int countPerPage = 10);
+        Task<IPagingResult<T>> FindAllAsync<TOrderKey>(Func<T, TOrderKey> orderBy, int pageIndex, int countPerPage = 10);
     }
 }

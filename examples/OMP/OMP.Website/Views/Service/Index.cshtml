@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Services - Overall";
+}
+
+@model OMP.Website.Models.IndexViewModel
+
+<div class="section" id="index-banner">
+    <h1>
+        @ViewData["Title"]
+        <small>Optional description</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active"></li>
+    </ol>
+</div>
+
+<div class="container">
+    <!--  Outer row  -->
+    <div class="row">
+        @if (Model.Services == null || Model.Services.Count == 0)
+        {
+            <div class="callout callout-info lead">
+                <h4>提示！</h4>
+                <p>
+                    当前你所属的Group中没有定义服务，请选择创建
+                </p>
+            </div>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>唯一标识</th>
+                        <th>接口定义</th>
+                        <th>Namespace</th>
+                        <th>配置</th>
+                        <th>环境变量</th>
+                        <th>代理端口</th>
+                        <th>端口</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var service in Model.Services)
+                {
+                        <tr>
+                            <td>@service</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+    </div>
+</div>

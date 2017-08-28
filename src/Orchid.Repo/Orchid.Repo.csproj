@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Orchid.Repo Class Library</Description>
+    <Authors>https://github.com/LaiYao/Orchid</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Orchid.Repo</AssemblyName>
+    <PackageId>Orchid.Repo</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
+  </ItemGroup>
+
+</Project>
