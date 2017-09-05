@@ -65,37 +65,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Core", "01 Core", "{C161
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Core", "src\Orchid.Core\Orchid.Core.csproj", "{8337B7EE-E4DC-4033-A804-EE3D159E4646}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo", "src\Orchid.Repo\Orchid.Repo.csproj", "{8704AADF-6529-4B85-A82D-234885D5F86E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo", "src\Repository\Orchid.Repo\Orchid.Repo.csproj", "{8704AADF-6529-4B85-A82D-234885D5F86E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.EF", "src\Orchid.Repo.EF\Orchid.Repo.EF.csproj", "{016B9189-AEE7-4229-8BB3-09ACC6B66AE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.EF", "src\Repository\Orchid.Repo.EF\Orchid.Repo.EF.csproj", "{016B9189-AEE7-4229-8BB3-09ACC6B66AE4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.Domain", "src\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj", "{39621A5E-4D5F-45D8-8AA4-0AEB092A599A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.Domain", "src\DDD\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj", "{39621A5E-4D5F-45D8-8AA4-0AEB092A599A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.Authentication.WeiXin", "src\Orchid.Web.Authentication.WeiXin\Orchid.Web.Authentication.WeiXin.csproj", "{9948145C-121A-4082-8A3D-5C779D723C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.Authentication.WeiXin", "src\MVC\Orchid.Web.Authentication.WeiXin\Orchid.Web.Authentication.WeiXin.csproj", "{9948145C-121A-4082-8A3D-5C779D723C05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.Authentication.Qzon", "src\Orchid.Web.Authentication.Qzon\Orchid.Web.Authentication.Qzon.csproj", "{67D263CF-8D7A-4043-B1B1-AD1314807683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.Authentication.Qzon", "src\MVC\Orchid.Web.Authentication.Qzon\Orchid.Web.Authentication.Qzon.csproj", "{67D263CF-8D7A-4043-B1B1-AD1314807683}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Domain", "src\Orchid.Identity.Domain\Orchid.Identity.Domain.csproj", "{B1E2868D-C0D8-4F74-8134-F038C0E24383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Domain", "src\Identity\Orchid.Identity.Domain\Orchid.Identity.Domain.csproj", "{B1E2868D-C0D8-4F74-8134-F038C0E24383}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Infrastructure.Data", "src\Orchid.Identity.Infrastructure.Data\Orchid.Identity.Infrastructure.Data.csproj", "{E58486EB-3E8D-46AA-BB6B-47C33EDA639B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Infrastructure.Data", "src\Identity\Orchid.Identity.Infrastructure.Data\Orchid.Identity.Infrastructure.Data.csproj", "{E58486EB-3E8D-46AA-BB6B-47C33EDA639B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Application", "src\Orchid.Identity.Application\Orchid.Identity.Application.csproj", "{07142382-2787-44D8-B09C-F340000C64DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Identity.Application", "src\Identity\Orchid.Identity.Application\Orchid.Identity.Application.csproj", "{07142382-2787-44D8-B09C-F340000C64DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Caching", "src\Orchid.Caching\Orchid.Caching.csproj", "{C6C27026-7036-4A3D-AD7D-FA093CEFE701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Caching", "src\Cache\Orchid.Caching\Orchid.Caching.csproj", "{C6C27026-7036-4A3D-AD7D-FA093CEFE701}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Messaging", "src\Orchid.Messaging\Orchid.Messaging.csproj", "{A04799F2-3676-4956-A4DE-2BDEA874070E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.MVC", "src\MVC\Orchid.Web.MVC\Orchid.Web.MVC.csproj", "{D7A453B6-EC9A-42BE-85FA-A9D0AA2D9BBA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Web.MVC", "src\Orchid.Web.MVC\Orchid.Web.MVC.csproj", "{D7A453B6-EC9A-42BE-85FA-A9D0AA2D9BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.CQRS", "src\DDD\Orchid.DDD.CQRS\Orchid.DDD.CQRS.csproj", "{A13228D6-009C-47E1-A8EC-8F2BB117C37E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.CQRS", "src\Orchid.DDD.CQRS\Orchid.DDD.CQRS.csproj", "{A13228D6-009C-47E1-A8EC-8F2BB117C37E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.EventSourcing", "src\Orchid.EventSourcing\Orchid.EventSourcing.csproj", "{3B88F03B-8B96-48C5-8569-80434752BE6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.EventSourcing", "src\DDD\Orchid.EventSourcing\Orchid.EventSourcing.csproj", "{3B88F03B-8B96-48C5-8569-80434752BE6F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CakeStore.Website", "examples\CakeStore\CakeStore.Website\CakeStore.Website.csproj", "{4A94E63B-52A5-404F-81FF-E4C69777B758}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.LocalizationWithinDB", "src\Orchid.LocalizationWithinDB\Orchid.LocalizationWithinDB.csproj", "{3E6ED6D2-71AC-434C-8019-DC120ED4076E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.Application", "src\Orchid.DDD.Application\Orchid.DDD.Application.csproj", "{546BC4E3-F2FF-45CB-8CD0-F1B1AE1169E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.DDD.Application", "src\DDD\Orchid.DDD.Application\Orchid.DDD.Application.csproj", "{546BC4E3-F2FF-45CB-8CD0-F1B1AE1169E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CakeStore.Api.Mobile", "examples\CakeStore\CakeStore.Api.Mobile\CakeStore.Api.Mobile.csproj", "{51391B0C-2E94-43F2-858E-29652D22C709}"
 EndProject
@@ -105,35 +103,35 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CakeStore.Order.Service.Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CakeStore.Order.Service.Client", "examples\CakeStore\CakeStore.Order.Service.Client\CakeStore.Order.Service.Client.csproj", "{629EDBA5-00B9-42E3-8DF8-4590D13528BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Dapper", "src\Orchid.Repo.Dapper\Orchid.Repo.Dapper.csproj", "{AFDFB8D3-9CC9-4320-8530-E48A95C20D71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Dapper", "src\Repository\Orchid.Repo.Dapper\Orchid.Repo.Dapper.csproj", "{AFDFB8D3-9CC9-4320-8530-E48A95C20D71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ApiGateway", "src\Orchid.Cloud.ApiGateway\Orchid.Cloud.ApiGateway.csproj", "{3A97ABF5-D63D-4430-82FE-6472160F6BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ApiGateway", "src\Cloud\Orchid.Cloud.ApiGateway\Orchid.Cloud.ApiGateway.csproj", "{3A97ABF5-D63D-4430-82FE-6472160F6BC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud", "src\Orchid.Cloud\Orchid.Cloud.csproj", "{A555418C-E0B6-4980-B143-915875A128CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud", "src\Cloud\Orchid.Cloud\Orchid.Cloud.csproj", "{A555418C-E0B6-4980-B143-915875A128CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service", "src\Orchid.Cloud.Service\Orchid.Cloud.Service.csproj", "{3B46771F-43FD-4A75-8D22-59602B8F75AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service", "src\Cloud\Service\Orchid.Cloud.Service\Orchid.Cloud.Service.csproj", "{3B46771F-43FD-4A75-8D22-59602B8F75AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Server", "src\Orchid.Cloud.Service.Server\Orchid.Cloud.Service.Server.csproj", "{77E693D1-3336-430C-A8D8-4DD5738E942B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Server", "src\Cloud\Service\Orchid.Cloud.Service.Server\Orchid.Cloud.Service.Server.csproj", "{77E693D1-3336-430C-A8D8-4DD5738E942B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.CircuitBreaker", "src\Orchid.Cloud.CircuitBreaker\Orchid.Cloud.CircuitBreaker.csproj", "{0ACB0744-19D4-4C7F-A2C6-733F2ECC8D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.CircuitBreaker", "src\Cloud\Orchid.Cloud.CircuitBreaker\Orchid.Cloud.CircuitBreaker.csproj", "{0ACB0744-19D4-4C7F-A2C6-733F2ECC8D12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Monitor", "src\Orchid.Cloud.Monitor\Orchid.Cloud.Monitor.csproj", "{54D044F3-8D14-4E23-8EDA-0ED55A4C1949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Monitor", "src\Cloud\Orchid.Cloud.Monitor\Orchid.Cloud.Monitor.csproj", "{54D044F3-8D14-4E23-8EDA-0ED55A4C1949}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry", "src\Orchid.Cloud.ServiceRegistry\Orchid.Cloud.ServiceRegistry.csproj", "{91E2C67B-5F6B-4862-9ED7-B39632510D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry", "src\Cloud\ServiceRegistry\Orchid.Cloud.ServiceRegistry\Orchid.Cloud.ServiceRegistry.csproj", "{91E2C67B-5F6B-4862-9ED7-B39632510D3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Default", "src\Orchid.Cloud.ServiceRegistry.Default\Orchid.Cloud.ServiceRegistry.Default.csproj", "{997D6245-CBBA-4351-8BE2-2EF09A2952CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Default", "src\Cloud\ServiceRegistry\Orchid.Cloud.ServiceRegistry.Default\Orchid.Cloud.ServiceRegistry.Default.csproj", "{997D6245-CBBA-4351-8BE2-2EF09A2952CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Etcd", "src\Orchid.Cloud.ServiceRegistry.Etcd\Orchid.Cloud.ServiceRegistry.Etcd.csproj", "{9511C3D0-6F0C-4E03-8093-9A784D6A1216}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Etcd", "src\Cloud\ServiceRegistry\Orchid.Cloud.ServiceRegistry.Etcd\Orchid.Cloud.ServiceRegistry.Etcd.csproj", "{9511C3D0-6F0C-4E03-8093-9A784D6A1216}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Mongo", "src\Orchid.Repo.Mongo\Orchid.Repo.Mongo.csproj", "{933275EA-319D-46B7-9BEB-216BB5B442D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Mongo", "src\Repository\Orchid.Repo.Mongo\Orchid.Repo.Mongo.csproj", "{933275EA-319D-46B7-9BEB-216BB5B442D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Service", "03 Service", "{CCF293C0-3213-498D-987C-1C31A94CF5CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Test", "src\Orchid.Cloud.Service.Test\Orchid.Cloud.Service.Test.csproj", "{DF303329-74DE-4222-B746-073EA3EC33E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Client.Restful", "src\Orchid.Cloud.Service.Client.Restful\Orchid.Cloud.Service.Client.Restful.csproj", "{39564065-A406-45A6-9E24-62B42316D83C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Client.Restful", "src\Cloud\Service\Orchid.Cloud.Service.Client.Restful\Orchid.Cloud.Service.Client.Restful.csproj", "{39564065-A406-45A6-9E24-62B42316D83C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Client", "src\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj", "{CD6124E7-5922-4F63-97C7-920E1D641D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Client", "src\Cloud\Service\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj", "{CD6124E7-5922-4F63-97C7-920E1D641D98}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroService", "MicroService", "{23680055-3CF2-4630-9694-69414867AEB1}"
 EndProject
@@ -157,25 +155,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Agent", "05 Agent", "{EE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Infrastructure", "02 Infrastructure", "{CA9D368A-C770-4084-8CFF-93D3FE4A9EFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent", "src\Orchid.Cloud.Agent\Orchid.Cloud.Agent.csproj", "{30967926-E144-4B8A-9324-767A8C40F749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent", "src\Cloud\Agent\Orchid.Cloud.Agent\Orchid.Cloud.Agent.csproj", "{30967926-E144-4B8A-9324-767A8C40F749}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Configuration", "src\Orchid.Cloud.Configuration\Orchid.Cloud.Configuration.csproj", "{7FCA1002-A242-4F12-B75A-F3DA0D057CB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Configuration", "src\Configuration\Orchid.Cloud.Configuration\Orchid.Cloud.Configuration.csproj", "{7FCA1002-A242-4F12-B75A-F3DA0D057CB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Logging", "src\Orchid.Cloud.Logging\Orchid.Cloud.Logging.csproj", "{6C60ABAB-12A5-47BA-9221-F55996C16776}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Logging.Agent", "src\Orchid.Cloud.Service.Logging.Agent\Orchid.Cloud.Service.Logging.Agent.csproj", "{52EA053B-0A11-42AE-9D02-348B498CEB6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Service.Logging.Agent", "src\Cloud\Orchid.Cloud.Service.Logging.Agent\Orchid.Cloud.Service.Logging.Agent.csproj", "{52EA053B-0A11-42AE-9D02-348B498CEB6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Client", "src\Orchid.Cloud.Agent.Client\Orchid.Cloud.Agent.Client.csproj", "{E4767DDE-302E-4D94-947F-9DDDBB678525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Client", "src\Cloud\Agent\Orchid.Cloud.Agent.Client\Orchid.Cloud.Agent.Client.csproj", "{E4767DDE-302E-4D94-947F-9DDDBB678525}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Abstractions", "src\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj", "{D3E44A3E-26ED-433A-9877-CD225CD82384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Agent.Abstractions", "src\Cloud\Agent\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj", "{D3E44A3E-26ED-433A-9877-CD225CD82384}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Load Balance", "01 Load Balance", "{5D5DAA06-77CC-4254-9CF8-EEE53C948427}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.LoadBalance", "src\Orchid.Cloud.LoadBalance\Orchid.Cloud.LoadBalance.csproj", "{1196008C-88D5-4D9C-B2FE-AF0F81FCD057}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.LoadBalance", "src\Cloud\LoadBalance\Orchid.Cloud.LoadBalance\Orchid.Cloud.LoadBalance.csproj", "{1196008C-88D5-4D9C-B2FE-AF0F81FCD057}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.LoadBalance.Kube", "src\Orchid.Cloud.LoadBalance.Kube\Orchid.Cloud.LoadBalance.Kube.csproj", "{20534500-D9FA-4976-8C0B-984594BF198C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.LoadBalance.Kube", "src\Cloud\LoadBalance\Orchid.Cloud.LoadBalance.Kube\Orchid.Cloud.LoadBalance.Kube.csproj", "{20534500-D9FA-4976-8C0B-984594BF198C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Consul", "src\Orchid.Cloud.ServiceRegistry.Consul\Orchid.Cloud.ServiceRegistry.Consul.csproj", "{D77140FB-FCC5-4779-A500-DCCDEDB7E3CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Consul", "src\Cloud\ServiceRegistry\Orchid.Cloud.ServiceRegistry.Consul\Orchid.Cloud.ServiceRegistry.Consul.csproj", "{D77140FB-FCC5-4779-A500-DCCDEDB7E3CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Logging", "03 Logging", "{1923EB13-1DA3-439E-81F4-BA00ED68B52F}"
 EndProject
@@ -183,7 +181,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Api Gateway", "04 Api Ga
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Configuration", "04 Configuration", "{3A506C91-E1F2-4D25-BB45-94639F37822D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Kube", "src\Orchid.Cloud.ServiceRegistry.Kube\Orchid.Cloud.ServiceRegistry.Kube.csproj", "{907BB701-C97F-491B-B986-313C657F49E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.ServiceRegistry.Kube", "src\Cloud\ServiceRegistry\Orchid.Cloud.ServiceRegistry.Kube\Orchid.Cloud.ServiceRegistry.Kube.csproj", "{907BB701-C97F-491B-B986-313C657F49E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 Admin", "06 Admin", "{CA4D9B14-CBB1-4C46-9F4B-AD58259A6454}"
 EndProject
@@ -191,15 +189,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Message", "05 Message", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMP.Application", "examples\OMP\OMP.Application\OMP.Application.csproj", "{8DF9B5E1-5F5C-4F0B-B12B-504FA986A5C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Configuration.Consul", "src\Orchid.Cloud.Configuration.Consul\Orchid.Cloud.Configuration.Consul.csproj", "{76853CE6-2ED4-4D2C-A96B-52E4F7E2DA1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Configuration.Consul", "src\Configuration\Orchid.Cloud.Configuration.Consul\Orchid.Cloud.Configuration.Consul.csproj", "{76853CE6-2ED4-4D2C-A96B-52E4F7E2DA1D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Admin.Abstractions", "src\Orchid.Cloud.Admin.Abstractions\Orchid.Cloud.Admin.Abstractions.csproj", "{E6D879B3-498A-436E-85B8-6F361F79F8B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Application", "src\Orchid.Cloud.Application\Orchid.Cloud.Application.csproj", "{DEFF61B6-5779-40C5-B249-D5958F580235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Cloud.Application", "src\Cloud\Orchid.Cloud.Application\Orchid.Cloud.Application.csproj", "{DEFF61B6-5779-40C5-B249-D5958F580235}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Etcd", "src\Orchid.Repo.Etcd\Orchid.Repo.Etcd.csproj", "{DE4512EC-9C58-4DD1-ACAB-2838DF88FDFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchid.Repo.Etcd", "src\Repository\Orchid.Repo.Etcd\Orchid.Repo.Etcd.csproj", "{DE4512EC-9C58-4DD1-ACAB-2838DF88FDFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchid.EventBus", "src\Orchid.EventBus\Orchid.EventBus.csproj", "{CF802D5B-5980-44B7-9B17-EA055715959A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchid.EventBus", "src\EventBus\Orchid.EventBus\Orchid.EventBus.csproj", "{CF802D5B-5980-44B7-9B17-EA055715959A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
