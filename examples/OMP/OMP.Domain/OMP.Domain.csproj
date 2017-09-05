@@ -5,13 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Orchid.Core\Orchid.Core.csproj" />
-    <ProjectReference Include="..\..\..\src\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj" />
-    <ProjectReference Include="..\..\..\src\Orchid.Repo\Orchid.Repo.csproj" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="Orchid.Core" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

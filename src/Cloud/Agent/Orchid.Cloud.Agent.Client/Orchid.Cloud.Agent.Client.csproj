@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Orchid.Core\Orchid.Core.csproj" />
+    <PackageReference Include="Orchid.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Service\Orchid.Cloud.Service.Client\Orchid.Cloud.Service.Client.csproj" />
     <ProjectReference Include="..\Orchid.Cloud.Agent.Abstractions\Orchid.Cloud.Agent.Abstractions.csproj" />
   </ItemGroup>

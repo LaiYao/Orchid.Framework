@@ -10,14 +10,11 @@
     <PackageId>Orchid.DDD.Domain</PackageId>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+    <Copyright>LaiYao@live.cn</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
-    <ProjectReference Include="..\Orchid.Repo\Orchid.Repo.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Orchid.Core" Version="1.0.0" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.4.0" />
   </ItemGroup>
 

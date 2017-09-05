@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Orchid.Core\Orchid.Core.csproj" />
     <ProjectReference Include="..\Orchid.Cloud.Service\Orchid.Cloud.Service.csproj" />
   </ItemGroup>
 

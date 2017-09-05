@@ -20,8 +20,4 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
-  </ItemGroup>
-
 </Project>

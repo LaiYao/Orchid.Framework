@@ -10,10 +10,15 @@
     <PackageId>Orchid.Repo</PackageId>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl></PackageProjectUrl>
+    <SignAssembly>false</SignAssembly>
+    <Copyright>LaiYao@live.cn</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
+    <PackageReference Include="Orchid.Core" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,8 @@
     <PackageId>Orchid.Core</PackageId>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/LaiYao/Orchid.Framework</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>

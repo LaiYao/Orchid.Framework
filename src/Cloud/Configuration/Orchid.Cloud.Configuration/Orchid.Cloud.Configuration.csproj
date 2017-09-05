@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
+    <ProjectReference Include="..\..\..\Core\Orchid.Core\Orchid.Core.csproj" />
   </ItemGroup>
 
 </Project>
