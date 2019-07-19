@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\examples\OMP\OMP.Domain\OMP.Domain.csproj" />
-    <ProjectReference Include="..\src\Orchid.Repo.Etcd\Orchid.Repo.Etcd.csproj" />
+    <ProjectReference Include="..\OMP.Domain\OMP.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -16,9 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
-    <ProjectReference Include="..\Orchid.Repo\Orchid.Repo.csproj" />
-    <ProjectReference Include="..\Orchid.Messaging\Orchid.Messaging.csproj" />
+    <ProjectReference Include="..\..\Repository\Orchid.Repo\Orchid.Repo.csproj" />
     <ProjectReference Include="..\Orchid.DDD.Domain\Orchid.DDD.Domain.csproj" />
   </ItemGroup>
 

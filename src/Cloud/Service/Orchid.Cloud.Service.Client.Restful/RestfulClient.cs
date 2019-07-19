@@ -71,6 +71,10 @@ namespace Orchid.Cloud.Service.Client.Restful
             {
                 return (int)parameters[0] + (int)parameters[1];
             }
+            else
+            {
+                //return 
+            }
 
             return 0;
         }

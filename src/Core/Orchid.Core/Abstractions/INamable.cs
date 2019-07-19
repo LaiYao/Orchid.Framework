@@ -1,4 +1,6 @@
-﻿namespace Orchid.Core.Abstractions
+﻿using System;
+
+namespace Orchid.Core.Abstractions
 {
     /// <summary>
     /// Represent the 

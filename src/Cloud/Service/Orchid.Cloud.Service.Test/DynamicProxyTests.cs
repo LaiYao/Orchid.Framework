@@ -6,7 +6,7 @@ using Orchid.Cloud.Service.Client.Restful;
 namespace Orchid.Cloud.Service.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class DynamicProxyTests
     {
         [TestMethod]
         public void TestMethod1()

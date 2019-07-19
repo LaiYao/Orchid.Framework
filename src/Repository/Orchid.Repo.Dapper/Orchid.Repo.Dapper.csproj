@@ -10,12 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.50.2" />
-    <PackageReference Include="Dapper.Contrib" Version="1.50.0" />
+    <PackageReference Include="Dapper.Contrib" Version="1.60.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orchid.Core\Orchid.Core.csproj" />
     <ProjectReference Include="..\Orchid.Repo\Orchid.Repo.csproj" />
   </ItemGroup>
 
